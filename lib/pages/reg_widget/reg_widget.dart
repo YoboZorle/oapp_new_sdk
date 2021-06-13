@@ -9,6 +9,7 @@
 import 'package:flare_flutter/flare_actor.dart';
 import 'package:flutter/material.dart';
 import 'package:oapp/anims/showup.dart';
+import 'package:oapp/pages/menu_widget/menu_widget.dart';
 import 'package:oapp/values/borders.dart';
 import 'package:oapp/values/values.dart';
 
@@ -63,10 +64,10 @@ class _RegWidgetState extends State<RegWidget> with TickerProviderStateMixin {
               ShowUp(delay: 500, child: header()),
               ShowUp(delay: 800, child: subtitle()),
               // Expanded(child: SizedBox()),
-              SizedBox(height: MediaQuery.of(context).size.height * .3),
+              SizedBox(height: MediaQuery.of(context).size.height * .4),
               ShowUp(delay: 1300, child: label()),
               ShowUp(delay: 1600, child: regPanel()),
-              ShowUp(delay: 2000, child: signupBtn()),
+             //  ShowUp(delay: 2000, child: signupBtn()),
               // Container(height: 100, width: 100)
             ],
           ),
@@ -142,60 +143,61 @@ class _RegWidgetState extends State<RegWidget> with TickerProviderStateMixin {
 
   regPanel() => Column(
         children: <Widget>[
+          // Container(
+          //   height: 60,
+          //   margin: EdgeInsets.only(bottom: 20),
+          //   child: Column(
+          //     mainAxisAlignment: MainAxisAlignment.center,
+          //     crossAxisAlignment:
+          //         CrossAxisAlignment.center, // If you want align text to left
+          //     children: <Widget>[
+          //       TextField(
+          //         textAlignVertical: TextAlignVertical.center,
+          //         textAlign: TextAlign.center,
+          //         maxLines: 1,
+          //         keyboardType: TextInputType.number,
+          //         style:
+          //             TextStyle(fontSize: 15.0, color: AppColors.bgLowerGreen),
+          //         decoration: InputDecoration(
+          //           focusColor: Colors.white,
+          //           filled: true,
+          //           fillColor: AppColors.primaryText,
+          //           hintText: 'Enter Phone Number',
+          //           hintStyle: TextStyle(
+          //             color: AppColors.bgLowerGreen,
+          //             fontFamily: "Ubuntu",
+          //             fontWeight: FontWeight.w500,
+          //             fontSize: 15,
+          //             letterSpacing: 0.2,
+          //           ),
+          //           labelStyle: TextStyle(
+          //             color: AppColors.bgLowerGreen,
+          //             fontFamily: "Ubuntu",
+          //             fontWeight: FontWeight.w500,
+          //             fontSize: 15,
+          //             letterSpacing: 0.2,
+          //           ),
+          //           border: OutlineInputBorder(
+          //             borderSide: BorderSide(
+          //               color: Colors.white,
+          //             ),
+          //             borderRadius: BorderRadius.all(Radius.circular(0)),
+          //           ),
+          //           focusedBorder: OutlineInputBorder(
+          //             borderSide: BorderSide(color: AppColors.primaryText),
+          //             borderRadius: BorderRadius.circular(0),
+          //           ),
+          //         ),
+          //       ),
+          //     ],
+          //   ),
+          // ),
           Container(
-            height: 60,
-            margin: EdgeInsets.only(bottom: 20),
-            child: Column(
-              mainAxisAlignment: MainAxisAlignment.center,
-              crossAxisAlignment:
-                  CrossAxisAlignment.center, // If you want align text to left
-              children: <Widget>[
-                TextField(
-                  textAlignVertical: TextAlignVertical.center,
-                  textAlign: TextAlign.center,
-                  maxLines: 1,
-                  keyboardType: TextInputType.number,
-                  style:
-                      TextStyle(fontSize: 15.0, color: AppColors.bgLowerGreen),
-                  decoration: InputDecoration(
-                    focusColor: Colors.white,
-                    filled: true,
-                    fillColor: AppColors.primaryText,
-                    hintText: 'Enter Phone Number',
-                    hintStyle: TextStyle(
-                      color: AppColors.bgLowerGreen,
-                      fontFamily: "Ubuntu",
-                      fontWeight: FontWeight.w500,
-                      fontSize: 15,
-                      letterSpacing: 0.2,
-                    ),
-                    labelStyle: TextStyle(
-                      color: AppColors.bgLowerGreen,
-                      fontFamily: "Ubuntu",
-                      fontWeight: FontWeight.w500,
-                      fontSize: 15,
-                      letterSpacing: 0.2,
-                    ),
-                    border: OutlineInputBorder(
-                      borderSide: BorderSide(
-                        color: Colors.white,
-                      ),
-                      borderRadius: BorderRadius.all(Radius.circular(0)),
-                    ),
-                    focusedBorder: OutlineInputBorder(
-                      borderSide: BorderSide(color: AppColors.primaryText),
-                      borderRadius: BorderRadius.circular(0),
-                    ),
-                  ),
-                ),
-              ],
-            ),
-          ),
-          Container(
-              height: 60,
+              height: 57,
               width: MediaQuery.of(context).size.width,
               margin: EdgeInsets.only(bottom: 15),
               decoration: BoxDecoration(
+                color: AppColors.primaryText,
                 border: Border.fromBorderSide(Borders.primaryBorder),
               ),
               child: Material(
@@ -210,12 +212,12 @@ class _RegWidgetState extends State<RegWidget> with TickerProviderStateMixin {
                         children: [
                           Container(
                             child: Text(
-                              "SIGN IN",
+                              "GET STARTED",
                               textAlign: TextAlign.center,
                               style: TextStyle(
-                                color: AppColors.primaryText,
+                                color: Colors.black,
                                 fontFamily: "Ubuntu",
-                                fontWeight: FontWeight.w500,
+                                fontWeight: FontWeight.w600,
                                 fontSize: 15,
                                 letterSpacing: 1,
                               ),
@@ -228,7 +230,7 @@ class _RegWidgetState extends State<RegWidget> with TickerProviderStateMixin {
                       Navigator.push(
                         context,
                         MaterialPageRoute(
-                          builder: (context) => new OtpWidget(),
+                          builder: (context) => new MenuWidget(),
                           fullscreenDialog: true,
                         ),
                       );
@@ -244,7 +246,7 @@ class _RegWidgetState extends State<RegWidget> with TickerProviderStateMixin {
         crossAxisAlignment: CrossAxisAlignment.center,
         children: <Widget>[
           Text(
-            'SIGN IN',
+            'Let\'s Go!',
             textAlign: TextAlign.center,
             style: TextStyle(
                 color: AppColors.primaryText,
@@ -255,7 +257,7 @@ class _RegWidgetState extends State<RegWidget> with TickerProviderStateMixin {
           ),
           SizedBox(height: 4),
           Text(
-            'Sign in and check in to events, share with\nfriends, earn points and redeem rewards.',
+            'Check in to events, share with\nfriends, earn points and redeem rewards.',
             textAlign: TextAlign.center,
             style: TextStyle(
                 color: AppColors.primaryText,

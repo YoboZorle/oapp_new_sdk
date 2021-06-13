@@ -80,7 +80,7 @@ class _OMeetUpState extends State<OMeetUp> {
                                     image: DecorationImage(
                                         fit: BoxFit.cover,
                                         image: NetworkImage(
-                                            'https://pbs.twimg.com/profile_images/953540415449419776/Ck4KsNo6.jpg')),
+                                            'https://cdn2.hubspot.net/hubfs/3873528/Women%20in%20Tech%20Africa%20Workers.png')),
                                     borderRadius:
                                         BorderRadius.all(Radius.circular(8.0)),
                                     color: Colors.grey.withOpacity(0.3),

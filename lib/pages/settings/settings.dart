@@ -46,37 +46,37 @@ class _SettingsState extends State<Settings> with TickerProviderStateMixin {
             children: <Widget>[
               SizedBox(height: 5),
               appBar(),
-              Container(
-                  height: 60,
-                  width: MediaQuery.of(context).size.width,
-                  margin: EdgeInsets.only(top: 5),
-                  padding: EdgeInsets.only(left: 20),
-                  alignment: Alignment.centerLeft,
-                  color: Colors.white.withOpacity(0.09),
-                  child: Row(
-                    children: <Widget>[
-                      Container(
-                        height: 40,
-                        width: 40,
-                        margin: EdgeInsets.only(right: 12),
-                        decoration: BoxDecoration(
-                          image: DecorationImage(
-                            image: NetworkImage(
-                                'https://www.nairaland.com/attachments/7943871_callixobinnajr201810100004_jpegef83c268db2ea2ddf715df237e9a268a'),
-                            fit: BoxFit.cover,
-                          ),
-                          shape: BoxShape.circle,
-                        ),
-                      ),
-                      Text('@tolu_ahmed',
-                          style: TextStyle(
-                              color: Colors.white,
-                              fontWeight: FontWeight.w600,
-                              fontFamily: 'Ubuntu',
-                              fontSize: 16)),
-                    ],
-                  )),
-              firstList(),
+              // Container(
+              //     height: 60,
+              //     width: MediaQuery.of(context).size.width,
+              //     margin: EdgeInsets.only(top: 5),
+              //     padding: EdgeInsets.only(left: 20),
+              //     alignment: Alignment.centerLeft,
+              //     color: Colors.white.withOpacity(0.09),
+              //     child: Row(
+              //       children: <Widget>[
+              //         Container(
+              //           height: 40,
+              //           width: 40,
+              //           margin: EdgeInsets.only(right: 12),
+              //           decoration: BoxDecoration(
+              //             image: DecorationImage(
+              //               image: NetworkImage(
+              //                   'https://www.nairaland.com/attachments/7943871_callixobinnajr201810100004_jpegef83c268db2ea2ddf715df237e9a268a'),
+              //               fit: BoxFit.cover,
+              //             ),
+              //             shape: BoxShape.circle,
+              //           ),
+              //         ),
+              //         Text('@tolu_ahmed',
+              //             style: TextStyle(
+              //                 color: Colors.white,
+              //                 fontWeight: FontWeight.w600,
+              //                 fontFamily: 'Ubuntu',
+              //                 fontSize: 16)),
+              //       ],
+              //     )),
+              // firstList(),
               secondList(),
               thirdList(),
               fourthList(),
