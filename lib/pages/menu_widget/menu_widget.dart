@@ -14,7 +14,9 @@ import 'package:oapp/pages/digital_activitist/digital_ac.dart';
 import 'package:oapp/pages/digital_activitist/test_ac.dart';
 import 'package:oapp/pages/digital_town_hall/digital_town_hall.dart';
 import 'package:oapp/pages/emerging_nation/emerging_nation.dart';
+import 'package:oapp/pages/move_with-os/corrections/thumbsup.dart';
 import 'package:oapp/pages/move_with-os/move_with_os.dart';
+import 'package:oapp/pages/move_with-os/thumbs_up.dart';
 import 'package:oapp/pages/settings/settings.dart';
 import 'package:oapp/pages/the_man/the_man.dart';
 import 'package:oapp/pages/the_podcast/podcast.dart';
@@ -383,6 +385,63 @@ class _MenuWidgetState extends State<MenuWidget> with TickerProviderStateMixin {
                     },
                   ),
                 )),
+
+
+            Container(
+                height: 65,
+                width: MediaQuery.of(context).size.width,
+                decoration: BoxDecoration(
+                  border: Border.fromBorderSide(Borders.primaryBorder),
+                ),
+                child: Material(
+                  color: Colors.transparent,
+                  child: InkWell(
+                    splashColor: AppColors.primaryText.withOpacity(0.4),
+                    child: Container(
+                      margin: EdgeInsets.symmetric(vertical: 7),
+                      // color: Colors.white.withOpacity(0.2),
+                      child: Row(
+                        children: [
+                          Container(
+                            width: 27,
+                            height: 27,
+                            margin: EdgeInsets.only(left: 18),
+                            decoration: BoxDecoration(
+                              border: Border.fromBorderSide(
+                                  Borders.secondaryBorder),
+                              borderRadius: Radii.k16pxRadius,
+                            ),
+                          ),
+                          Container(
+                            margin: EdgeInsets.only(left: 25),
+                            child: Text(
+                              "ThumbsUp Thursday",
+                              textAlign: TextAlign.left,
+                              style: TextStyle(
+                                color: AppColors.primaryText,
+                                fontFamily: "Ubuntu",
+                                fontWeight: FontWeight.w400,
+                                fontSize: 15,
+                                letterSpacing: -0.3,
+                              ),
+                            ),
+                          ),
+                        ],
+                      ),
+                    ),
+                    onTap: () {
+                      Navigator.push(
+                        context,
+                        MaterialPageRoute(
+                            builder: (context) => ThumbsUpNew(),
+                            fullscreenDialog: true),
+                      );
+                    },
+                  ),
+                )),
+
+
+
 
             Container(
                 height: 65,
