@@ -36,7 +36,7 @@ class _PodcastState extends State<Podcast> {
       "desc": "Prof Yemi Osinbajo Speaks every Monday on The Podcast",
       "url": "assets/flutter_assets/audio/audio_one.mp3",
       "coverUrl":
-          "https://pbs.twimg.com/profile_images/1160567667574677505/VcYeM9xh_400x400.jpg"
+          "https://live.mrf.io/statics/i/ps/storage.googleapis.com/thisday-846548948316-wp-data/wp-media/2020/03/ba8178e5-yemi-osinbajo.jpg?width=1200&enable=upscale"
     },
     {
       "title": "Naija Hits FM on The Podcast",
@@ -422,9 +422,9 @@ class _PodcastState extends State<Podcast> {
               'Listen Now',
               style: TextStyle(
                   color: AppColors.primaryText,
-                  fontWeight: FontWeight.w900,
+                  fontWeight: FontWeight.w800,
                   fontFamily: 'Ubuntu',
-                  fontSize: 26),
+                  fontSize: 22),
             ),
           ],
         ),

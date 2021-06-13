@@ -14,6 +14,7 @@ import 'package:oapp/pages/digital_activitist/digital_ac.dart';
 import 'package:oapp/pages/digital_activitist/test_ac.dart';
 import 'package:oapp/pages/digital_town_hall/digital_town_hall.dart';
 import 'package:oapp/pages/emerging_nation/emerging_nation.dart';
+import 'package:oapp/pages/move_with-os/corrections/move_with_osi_new.dart';
 import 'package:oapp/pages/move_with-os/corrections/thumbsup.dart';
 import 'package:oapp/pages/move_with-os/move_with_os.dart';
 import 'package:oapp/pages/move_with-os/thumbs_up.dart';
@@ -489,7 +490,9 @@ class _MenuWidgetState extends State<MenuWidget> with TickerProviderStateMixin {
                         Navigator.push(
                           context,
                           MaterialPageRoute(
-                              builder: (context) => MoveWithOs(),
+                              builder: (context) =>
+                                  // MoveWithOs(),
+                              MoveWithOsi(),
                               fullscreenDialog: true),
                         );
                       },

@@ -34,7 +34,7 @@ class _TruthsState extends State<Truths> {
                   // color: Colors.white.withOpacity(0.2),
                   child: ListView(
                     scrollDirection: Axis.vertical,
-                    padding: EdgeInsets.only(left: 15, right: 15),
+                    padding: EdgeInsets.only(left: 15, right: 15, top: 30),
                     physics: BouncingScrollPhysics(),
                     shrinkWrap: true,
                     children: <Widget>[
