@@ -102,6 +102,7 @@ class _MoveWithOsiState extends State<MoveWithOsi>
                 ],
                 bottom: TabBar(
                   // indicatorSize: TabBarIndicatorSize.label,
+                  physics: NeverScrollableScrollPhysics(),
                   labelColor: Colors.white,
                   unselectedLabelColor: Colors.blueGrey,
                   indicatorPadding: EdgeInsets.only(left: 15.0, right: 15.0),
@@ -121,6 +122,7 @@ class _MoveWithOsiState extends State<MoveWithOsi>
               ),
 
             body: TabBarView(
+              physics: NeverScrollableScrollPhysics(),
               controller: _controller,
               children: [Podcast(), Truths()],
             ),
